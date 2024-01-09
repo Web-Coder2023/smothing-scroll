@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Плавный скролл</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Подключаем CSS файл -->
+</head>
+
+<body class="main">
+    <nav>
+        <ul>
+            <li><a href="#section1">Раздел 1</a></li>
+            <li><a href="#section2">Раздел 2</a></li>
+            <li><a href="#section3">Раздел 3</a></li>
+        </ul>
+    </nav>
+
+    <section id="section1">
+        <h1>Раздел 1</h1>
+        <p>Содержимое раздела 1</p>
+    </section>
+
+    <section id="section2">
+        <h1>Раздел 2</h1>
+        <p>Содержимое раздела 2</p>
+    </section>
+
+    <section id="section3">
+        <h1>Раздел 3</h1>
+        <p>Содержимое раздела 3</p>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"
+        integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
+    <script>
+        SmoothScroll({
+            // Время скролла 400 = 0.4 секунды
+            animationTime: 800,
+            // Размер шага в пикселях
+            stepSize: 75,
+
+            // Дополнительные настройки:
+
+            // Ускорение
+            accelerationDelta: 30,
+            // Максимальное ускорение
+            accelerationMax: 2,
+
+            // Поддержка клавиатуры
+            keyboardSupport: true,
+            // Шаг скролла стрелками на клавиатуре в пикселях
+            arrowScroll: 50,
+
+            // Pulse (less tweakable)
+            // ratio of "tail" to "acceleration"
+            pulseAlgorithm: true,
+            pulseScale: 4,
+            pulseNormalize: 1,
+
+            // Поддержка тачпада
+            touchpadSupport: true,
+        })
+    </script>
+
+</body>
+
+</html>
